@@ -1,0 +1,47 @@
+[
+  {
+    "file": "originais/Hashtag Eletro.pbix",
+    "sha256": "cfdeac583e337201074a4fcef59f979d1b6b500f5c36d2a05aed1161c799b614",
+    "bytes": 3932811
+  },
+  {
+    "file": "originais/Base Devoluções.xlsx",
+    "sha256": "c5dfe13152c925bbecbf95fd7c5a96407ae0766256f8569a49ad8398393d3dbd",
+    "bytes": 58236
+  },
+  {
+    "file": "originais/Base Vendas - 2020.xlsx",
+    "sha256": "5a562bd98803a8e12abe167295339083208c30ea296d5b8b77602205bc0fefe3",
+    "bytes": 110161
+  },
+  {
+    "file": "originais/Base Vendas - 2021.xlsx",
+    "sha256": "9e23159790f96024203aa52e3d15ec8474324004f283583abbba8d81d9a39909",
+    "bytes": 844412
+  },
+  {
+    "file": "originais/Base Vendas - 2022.xlsx",
+    "sha256": "da419ecb300509f7087ec9361c2c2c9b681cde744cc183833095f99b69928221",
+    "bytes": 1029472
+  },
+  {
+    "file": "originais/Cadastro Clientes.xlsx",
+    "sha256": "df7222c3acb6c35277ca791afa3c9c58fa5f6846a7be1a328ed8744012e65a16",
+    "bytes": 1587164
+  },
+  {
+    "file": "originais/Cadastro Localidades.xlsx",
+    "sha256": "1aaccff0294bb8ea03665e3f976d3bd1c7a2738359ddc53ee607f0829540b532",
+    "bytes": 9688
+  },
+  {
+    "file": "originais/Cadastro Lojas.xlsx",
+    "sha256": "c3dd30c21f0a0aceb9dcd1ed1020cb751c250142577af7ce11064812753a7420",
+    "bytes": 27290
+  },
+  {
+    "file": "originais/Cadastro Produtos.xlsx",
+    "sha256": "f4b8840c34251a1e8c461590d65f84afa221ad621beed3933a58b9b3795991fd",
+    "bytes": 25756
+  }
+]

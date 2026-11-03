@@ -1,0 +1,205 @@
+[
+  {
+    "TableName":"Medidas",
+    "Name":"% Devoluções",
+    "Expression":"[Total Devoluções]\/[Total Vendas]",
+    "DisplayFolder":null,
+    "Description":null
+  },
+  {
+    "TableName":"Medidas",
+    "Name":"% Margem de Lucro",
+    "Expression":"[Lucro Total]\/[Faturamento Total]",
+    "DisplayFolder":null,
+    "Description":null
+  },
+  {
+    "TableName":"Medidas",
+    "Name":"Total Vendas",
+    "Expression":"SUM(fVendas[Qtd Vendida])",
+    "DisplayFolder":null,
+    "Description":null
+  },
+  {
+    "TableName":"Medidas",
+    "Name":"Total Devoluções",
+    "Expression":"SUM('fDevoluções'[Qtd Devolvida])",
+    "DisplayFolder":null,
+    "Description":null
+  },
+  {
+    "TableName":"Medidas",
+    "Name":"Vendas Online",
+    "Expression":"CALCULATE(\n    [Total Vendas],\n    dLojas[Tipo]=\"Online\"\n)",
+    "DisplayFolder":null,
+    "Description":null
+  },
+  {
+    "TableName":"Medidas",
+    "Name":"% Vendas Online",
+    "Expression":"DIVIDE([Vendas Online], [Total Vendas], \"Sem vendas\")",
+    "DisplayFolder":null,
+    "Description":null
+  },
+  {
+    "TableName":"Medidas",
+    "Name":"Faturamento Total",
+    "Expression":"SUMX(\n    fVendas,\n    fVendas[Qtd Vendida]*RELATED(dProdutos[Preço Unitario])\n)",
+    "DisplayFolder":null,
+    "Description":null
+  },
+  {
+    "TableName":"Medidas",
+    "Name":"Lucro Total",
+    "Expression":"SUMX(\n    fVendas,\n    (fVendas[Qtd Vendida]*RELATED(dProdutos[Preço Unitario]))*0.9-\n    fVendas[Qtd Vendida]*RELATED(dProdutos[Custo Unitario])\n)",
+    "DisplayFolder":null,
+    "Description":null
+  },
+  {
+    "TableName":"Medidas",
+    "Name":"Prejuízo Devoluções",
+    "Expression":"SUMX(\n    'fDevoluções',\n    'fDevoluções'[Qtd Devolvida]*RELATED(dProdutos[Preço Unitario])\n)",
+    "DisplayFolder":null,
+    "Description":null
+  },
+  {
+    "TableName":"Medidas",
+    "Name":"Faturamento YTD",
+    "Expression":"CALCULATE([Faturamento Total],\nDATESYTD(dCalendario[Datas]))",
+    "DisplayFolder":null,
+    "Description":null
+  },
+  {
+    "TableName":"Medidas",
+    "Name":"Faturamento YTD 2",
+    "Expression":"TOTALYTD([Faturamento Total], dCalendario[Datas])",
+    "DisplayFolder":null,
+    "Description":null
+  },
+  {
+    "TableName":"Medidas",
+    "Name":"Faturamento MTD",
+    "Expression":"TOTALMTD([Faturamento Total],dCalendario[Datas])",
+    "DisplayFolder":null,
+    "Description":null
+  },
+  {
+    "TableName":"Medidas",
+    "Name":"Faturamento QTD",
+    "Expression":"TOTALQTD([Faturamento Total], dCalendario[Datas])",
+    "DisplayFolder":null,
+    "Description":null
+  },
+  {
+    "TableName":"Medidas",
+    "Name":"Faturamento Mês Anterior",
+    "Expression":"CALCULATE(\n    [Faturamento Total],\n    DATEADD(dCalendario[Datas],-1,MONTH)\n)",
+    "DisplayFolder":null,
+    "Description":null
+  },
+  {
+    "TableName":"Medidas",
+    "Name":"% Crescimento MoM",
+    "Expression":"DIVIDE([Faturamento Total]-[Faturamento Mês Anterior],[Faturamento Mês Anterior],\"Sem Histórico\")",
+    "DisplayFolder":null,
+    "Description":null
+  },
+  {
+    "TableName":"Medidas",
+    "Name":"% Crescimento Faturamento YoY",
+    "Expression":"\nvar vFat_ano_anterior = CALCULATE(\n    [Faturamento Total],\n    DATEADD(dCalendario[Datas],-12,MONTH)\n)\nvar vCrescimento = DIVIDE([Faturamento Total]-vFat_ano_anterior,vFat_ano_anterior)\nreturn\nIF(HASONEVALUE(dCalendario[Ano])&&vCrescimento<>BLANK(),\nvCrescimento,\n\"N\/A\")",
+    "DisplayFolder":null,
+    "Description":null
+  },
+  {
+    "TableName":"Medidas",
+    "Name":"Faturamento YTD LY",
+    "Expression":"CALCULATE(\n    [Faturamento YTD],\n    DATEADD(dCalendario[Datas],-12, MONTH)\n)",
+    "DisplayFolder":null,
+    "Description":null
+  },
+  {
+    "TableName":"Medidas",
+    "Name":"% Crescimento YoY YTD",
+    "Expression":"\nIF(HASONEVALUE(dCalendario[Inicio do Mês]),\nDIVIDE(\n    [Faturamento YTD]-[Faturamento YTD LY],\n    [Faturamento YTD LY]\n))",
+    "DisplayFolder":null,
+    "Description":null
+  },
+  {
+    "TableName":"Medidas",
+    "Name":"% Crescimento Lucro YoY",
+    "Expression":"\nvar vLucro_Ano_Anterior = CALCULATE(\n    [Lucro Total],\n    DATEADD(dCalendario[Datas],-12,MONTH)\n)\nvar vCrescimento = DIVIDE([Lucro Total]\n-vLucro_Ano_Anterior,vLucro_Ano_Anterior)\nreturn\nIF(HASONEVALUE(dCalendario[Ano])&&vCrescimento<>BLANK(),\nvCrescimento,\n\"N\/A\")",
+    "DisplayFolder":null,
+    "Description":null
+  },
+  {
+    "TableName":"Medidas",
+    "Name":"% Crescimento Vendas YoY",
+    "Expression":"\nvar vVendas_Ano_Anterior = CALCULATE(\n    [Total Vendas],\n    DATEADD(dCalendario[Datas],-12,MONTH)\n)\nvar vCrescimento = DIVIDE([Total Vendas]\n-vVendas_Ano_Anterior,vVendas_Ano_Anterior)\nreturn\nIF(HASONEVALUE(dCalendario[Ano])&&vCrescimento<>BLANK(),\nvCrescimento,\n\"N\/A\")",
+    "DisplayFolder":null,
+    "Description":null
+  },
+  {
+    "TableName":"Medidas",
+    "Name":"Faturamento LY",
+    "Expression":"\nvar vFatLY = CALCULATE(\n    [Faturamento Total],\n    DATEADD(\n        dCalendario[Datas],\n        -1,\n        YEAR\n    )\n)\nreturn\nIF(\n    HASONEVALUE(dCalendario[Ano]),\n    vFatLY\n    )",
+    "DisplayFolder":null,
+    "Description":null
+  },
+  {
+    "TableName":"Medidas",
+    "Name":"Produto Mais Vendido",
+    "Expression":"\nCALCULATE(\n    MAX(dProdutos[Nome Produto]),\n    TOPN(\n        1,\n        ALL(dProdutos[Nome Produto]),\n        [Total Vendas]\n        )\n)",
+    "DisplayFolder":null,
+    "Description":null
+  },
+  {
+    "TableName":"Medidas",
+    "Name":"Qtd Vendida (Top 1 Produto)",
+    "Expression":"\nCALCULATE(\n    [Total Vendas],\n    TOPN(\n        1,\n        ALL(dProdutos[Nome Produto]),\n        [Total Vendas]\n    )\n)",
+    "DisplayFolder":null,
+    "Description":null
+  },
+  {
+    "TableName":"Medidas",
+    "Name":"% das Vendas (Top 1 Produto)",
+    "Expression":"[Qtd Vendida (Top 1 Produto)]\/[Total Vendas]",
+    "DisplayFolder":null,
+    "Description":null
+  },
+  {
+    "TableName":"Medidas",
+    "Name":"Loja + Vendas",
+    "Expression":"\nCALCULATE(\n    MAX(dLojas[Nome da Loja]),\n    TOPN(\n        1,\n        ALL(dLojas[Nome da Loja]),\n        [Total Vendas]\n    )\n)",
+    "DisplayFolder":null,
+    "Description":null
+  },
+  {
+    "TableName":"Medidas",
+    "Name":"Qtd Vendida (Loja + Vendas)",
+    "Expression":"\nCALCULATE(\n    [Total Vendas],\n    TOPN(\n        1,\n        ALL(dLojas[Nome da Loja]),\n        [Total Vendas]\n    )\n)",
+    "DisplayFolder":null,
+    "Description":null
+  },
+  {
+    "TableName":"Medidas",
+    "Name":"% das Vendas (Loja + Vendas)",
+    "Expression":"\nDIVIDE([Qtd Vendida (Loja + Vendas)],[Total Vendas])",
+    "DisplayFolder":null,
+    "Description":null
+  },
+  {
+    "TableName":"Medidas",
+    "Name":"Faturamento Perdido",
+    "Expression":"\nSUMX(\n    'fDevoluções',\n    'fDevoluções'[Qtd Devolvida]*RELATED(dProdutos[Preço Unitario])\n)",
+    "DisplayFolder":null,
+    "Description":null
+  },
+  {
+    "TableName":"Medidas",
+    "Name":"% Fat Perdido",
+    "Expression":"[Faturamento Perdido]\/[Faturamento Total]",
+    "DisplayFolder":null,
+    "Description":null
+  }
+]

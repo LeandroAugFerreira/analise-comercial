@@ -1,0 +1,38 @@
+[
+  {
+    "ParameterName":"dLocalidades",
+    "Description":null,
+    "Expression":"let\n    Fonte = Excel.Workbook(File.Contents(Caminho & \"\\Cadastro Localidades.xlsx\"), null, true),\n    Plan1_Sheet = Fonte{[Item=\"Plan1\",Kind=\"Sheet\"]}[Data],\n    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(Plan1_Sheet, [PromoteAllScalars=true]),\n    #\"Tipo Alterado\" = Table.TransformColumnTypes(#\"Cabeçalhos Promovidos\",{{\"ID Localidade\", Int64.Type}, {\"País\", type text}, {\"Continente\", type text}})\nin\n    #\"Tipo Alterado\"",
+    "ModifiedTime":1669402028000
+  },
+  {
+    "ParameterName":"Parâmetro1",
+    "Description":null,
+    "Expression":"#\"Arquivo de Amostra\" meta [IsParameterQuery=true, BinaryIdentifier=#\"Arquivo de Amostra\", Type=\"Binary\", IsParameterQueryRequired=true]",
+    "ModifiedTime":1669402028000
+  },
+  {
+    "ParameterName":"Transformar o Arquivo de Exemplo",
+    "Description":null,
+    "Expression":"let\n    Fonte = Excel.Workbook(Parâmetro1, null, true),\n    Plan1_Sheet = Fonte{[Item=\"Plan1\",Kind=\"Sheet\"]}[Data],\n    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(Plan1_Sheet, [PromoteAllScalars=true])\nin\n    #\"Cabeçalhos Promovidos\"",
+    "ModifiedTime":1669402028000
+  },
+  {
+    "ParameterName":"Arquivo de Amostra",
+    "Description":null,
+    "Expression":"let\n    Fonte = Folder.Files(Caminho),\n    #\"Linhas Filtradas\" = Table.SelectRows(Fonte, each Text.StartsWith([Name], \"Base Vendas\")),\n    Navegação1 = #\"Linhas Filtradas\"{0}[Content]\nin\n    Navegação1",
+    "ModifiedTime":1669402028000
+  },
+  {
+    "ParameterName":"Transformar Arquivo",
+    "Description":null,
+    "Expression":"let\n    Fonte = (Parâmetro1 as binary) => let\n    Fonte = Excel.Workbook(Parâmetro1, null, true),\n    Plan1_Sheet = Fonte{[Item=\"Plan1\",Kind=\"Sheet\"]}[Data],\n    #\"Cabeçalhos Promovidos\" = Table.PromoteHeaders(Plan1_Sheet, [PromoteAllScalars=true])\nin\n    #\"Cabeçalhos Promovidos\"\nin\n    Fonte",
+    "ModifiedTime":1669402028000
+  },
+  {
+    "ParameterName":"Caminho",
+    "Description":null,
+    "Expression":"\"C:\\Users\\alonp\\hashtagtreinamentos.com\\Diego Amorim - Hashtag\\Cursos\\Aulas Power BI\\Power BI Impressionador 2.0\\Bases de Dados\" meta [IsParameterQuery=true, Type=\"Any\", IsParameterQueryRequired=true]",
+    "ModifiedTime":1669402028000
+  }
+]

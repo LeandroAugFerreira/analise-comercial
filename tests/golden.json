@@ -1,0 +1,170 @@
+{
+  "kind": "comercial",
+  "cases": [
+    {
+      "context": {},
+      "expected": {
+        "Total Vendas": 84174,
+        "Faturamento Total": 15226080.56,
+        "Lucro Total": 9842627.604,
+        "% Margem de Lucro": 0.6464321244862768,
+        "Total Devoluções": 1828,
+        "% Devoluções": 0.021716919713925916,
+        "Faturamento Perdido": 433032.87,
+        "% Fat Perdido": 0.028440206151122586
+      }
+    },
+    {
+      "context": {
+        "dCalendario|Ano": 2020
+      },
+      "expected": {
+        "Total Vendas": 2630,
+        "Faturamento Total": 2183760.41,
+        "Lucro Total": 1414636.269,
+        "% Margem de Lucro": 0.6477982944108781,
+        "Total Devoluções": 86,
+        "% Devoluções": 0.03269961977186312,
+        "Faturamento Perdido": 75115.72,
+        "% Fat Perdido": 0.03439741816731626
+      }
+    },
+    {
+      "context": {
+        "dCalendario|Ano": 2021
+      },
+      "expected": {
+        "Total Vendas": 36230,
+        "Faturamento Total": 5982860.68,
+        "Lucro Total": 3872367.712,
+        "% Margem de Lucro": 0.6472435042562281,
+        "Total Devoluções": 770,
+        "% Devoluções": 0.021253105161468396,
+        "Faturamento Perdido": 154643.8,
+        "% Fat Perdido": 0.02584780229246455
+      }
+    },
+    {
+      "context": {
+        "dCalendario|Ano": 2022
+      },
+      "expected": {
+        "Total Vendas": 45314,
+        "Faturamento Total": 7059459.47,
+        "Lucro Total": 4555623.623,
+        "% Margem de Lucro": 0.645321875188838,
+        "Total Devoluções": 972,
+        "% Devoluções": 0.021450324403054243,
+        "Faturamento Perdido": 203273.35,
+        "% Fat Perdido": 0.028794463777833686
+      }
+    },
+    {
+      "context": {
+        "dLojas|Tipo": "Online"
+      },
+      "expected": {
+        "Total Vendas": 14288,
+        "Faturamento Total": 2499053.43,
+        "Lucro Total": 1608688.187,
+        "% Margem de Lucro": 0.6437190048393643,
+        "Total Devoluções": 318,
+        "% Devoluções": 0.022256438969764838,
+        "Faturamento Perdido": 80421.67,
+        "% Fat Perdido": 0.03218085257184757
+      }
+    },
+    {
+      "context": {
+        "dProdutos|Tipo do Produto": "Notebook"
+      },
+      "expected": {
+        "Total Vendas": 6262,
+        "Faturamento Total": 7469356.74,
+        "Lucro Total": 4923166.666,
+        "% Margem de Lucro": 0.6591152139829379,
+        "Total Devoluções": 193,
+        "% Devoluções": 0.03082082401788566,
+        "Faturamento Perdido": 218098.2,
+        "% Fat Perdido": 0.02919906058737797
+      }
+    },
+    {
+      "context": {
+        "dCalendario|Ano": 2021,
+        "dCalendario|Mês": "julho"
+      },
+      "expected": {
+        "Total Vendas": 1954,
+        "Faturamento Total": 484413.87,
+        "Lucro Total": 317853.983,
+        "% Margem de Lucro": 0.6561620190602717,
+        "Total Devoluções": 45,
+        "% Devoluções": 0.02302968270214944,
+        "Faturamento Perdido": 11249.72,
+        "% Fat Perdido": 0.023223364764514278
+      }
+    },
+    {
+      "context": {
+        "dCalendario|Ano": 2022,
+        "dLojas|Continente": "Europa"
+      },
+      "expected": {
+        "Total Vendas": 8733,
+        "Faturamento Total": 1359662.36,
+        "Lucro Total": 876859.224,
+        "% Margem de Lucro": 0.6449095376884597,
+        "Total Devoluções": 181,
+        "% Devoluções": 0.0207259819077064,
+        "Faturamento Perdido": 37401.9,
+        "% Fat Perdido": 0.027508226380555244
+      }
+    },
+    {
+      "context": {
+        "dCalendario|Ano": 2021,
+        "dCalendario|Data Vigente?": "Sim"
+      },
+      "expected": {
+        "Total Vendas": 36230,
+        "Faturamento Total": 5982860.68,
+        "Lucro Total": 3872367.712,
+        "% Margem de Lucro": 0.6472435042562281,
+        "Total Devoluções": 770,
+        "% Devoluções": 0.021253105161468396,
+        "Faturamento Perdido": 154643.8,
+        "% Fat Perdido": 0.02584780229246455
+      }
+    },
+    {
+      "context": {
+        "dCalendario|Ano": 1999
+      },
+      "expected": {
+        "Total Vendas": 0,
+        "Faturamento Total": 0.0,
+        "Lucro Total": 0.0,
+        "% Margem de Lucro": null,
+        "Total Devoluções": 0,
+        "% Devoluções": null,
+        "Faturamento Perdido": 0.0,
+        "% Fat Perdido": null
+      }
+    }
+  ],
+  "table_rows": {
+    "DateTableTemplate_0c184832-04ce-4ad8-b82e-4f16851dd803": 1,
+    "LocalDateTable_6e30c11f-65e0-4c44-99d0-adad57233e71": 26298,
+    "LocalDateTable_8d496b3b-761a-4d12-af06-ca3724ac887a": 1096,
+    "LocalDateTable_9f332867-e634-43b9-9450-99db4792c543": 1096,
+    "Parâmetro": 2,
+    "dCalendario": 1096,
+    "dClientes": 18148,
+    "dLojas": 306,
+    "dProdutos": 293,
+    "fDevoluções": 1809,
+    "fVendas": 56046
+  },
+  "data_file_sha256": "4014900b538139eb7490cb7d6c9560b2b1fc0300d9b4abe6952de9468f0fd449"
+}

@@ -1,0 +1,13 @@
+# Metodologia e preservação
+
+Os arquivos em originais/ mantêm os bytes e hashes da origem. As tabelas do PBIX foram lidas sem atualização de fontes e sem recalcular colunas dependentes da data corrente. modelo/ contém medidas DAX, consultas Power Query e esquema reais extraídos. O layout e os fundos provêm do PBIX.
+
+A implementação JavaScript cobre os indicadores visíveis. Os testes usam valores esperados calculados independentemente em Python, incluindo períodos sem dados. O snapshot integral tem contagens e hash; as fontes binárias têm SHA-256. Todas as tabelas exportadas são mantidas, incluindo calendários automáticos.
+
+Referência do extrator: [PBIXRay](https://github.com/Hugoberry/pbixray), versão usada 0.15.5. Ele lê o modelo e não avalia DAX. A interface web tem cálculos próprios explícitos; as expressões DAX originais são fornecidas para revisão.
+
+Mapas: [IBGE, API de malhas](https://servicodados.ibge.gov.br/api/docs/malhas?versao=3) e [Natural Earth](https://github.com/nvkelso/natural-earth-vector), arquivos locais consultados em 03/11/2026. As bolhas por UF/continente representam as mesmas categorias do modelo, sobre uma malha simplificada. Árvore de decomposição com navegação manual; não executa análises de IA do Power BI.
+
+Faturamento = soma de quantidade × preço do produto. Lucro segue exatamente a medida do PBIX: quantidade × (preço × 0,9 − custo). Não foi substituído por faturamento menos custo simples. As taxas de devolução usam unidades devolvidas / unidades vendidas no mesmo recorte; perda financeira usa preço de venda dos produtos devolvidos.
+
+A captura do portfólio em 2021 é reconciliável: faturamento 5.982.860,68; lucro 3.872.367,712; 36.230 unidades. O PBIX fornecido abre salvo em 2022.

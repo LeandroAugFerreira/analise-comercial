@@ -1,0 +1,85 @@
+TAP version 13
+# Subtest: PBIX e bases são cópias binárias preservadas
+ok 1 - PBIX e bases são cópias binárias preservadas
+  ---
+  duration_ms: 18.4158
+  ...
+# Subtest: Snapshot binário e contagens de todas as tabelas preservados
+ok 2 - Snapshot binário e contagens de todas as tabelas preservados
+  ---
+  duration_ms: 27.2778
+  ...
+# Subtest: Reconciliação independente do contexto 0 {}
+ok 3 - Reconciliação independente do contexto 0 {}
+  ---
+  duration_ms: 56.1172
+  ...
+# Subtest: Reconciliação independente do contexto 1 {"dCalendario|Ano":2020}
+ok 4 - Reconciliação independente do contexto 1 {"dCalendario|Ano":2020}
+  ---
+  duration_ms: 46.3492
+  ...
+# Subtest: Reconciliação independente do contexto 2 {"dCalendario|Ano":2021}
+ok 5 - Reconciliação independente do contexto 2 {"dCalendario|Ano":2021}
+  ---
+  duration_ms: 71.8278
+  ...
+# Subtest: Reconciliação independente do contexto 3 {"dCalendario|Ano":2022}
+ok 6 - Reconciliação independente do contexto 3 {"dCalendario|Ano":2022}
+  ---
+  duration_ms: 35.6984
+  ...
+# Subtest: Reconciliação independente do contexto 4 {"dLojas|Tipo":"Online"}
+ok 7 - Reconciliação independente do contexto 4 {"dLojas|Tipo":"Online"}
+  ---
+  duration_ms: 33.1536
+  ...
+# Subtest: Reconciliação independente do contexto 5 {"dProdutos|Tipo do Produto":"Notebook"}
+ok 8 - Reconciliação independente do contexto 5 {"dProdutos|Tipo do Produto":"Notebook"}
+  ---
+  duration_ms: 22.1079
+  ...
+# Subtest: Reconciliação independente do contexto 6 {"dCalendario|Ano":2021,"dCalendario|Mês":"julho"}
+ok 9 - Reconciliação independente do contexto 6 {"dCalendario|Ano":2021,"dCalendario|Mês":"julho"}
+  ---
+  duration_ms: 33.1368
+  ...
+# Subtest: Reconciliação independente do contexto 7 {"dCalendario|Ano":2022,"dLojas|Continente":"Europa"}
+ok 10 - Reconciliação independente do contexto 7 {"dCalendario|Ano":2022,"dLojas|Continente":"Europa"}
+  ---
+  duration_ms: 25.4727
+  ...
+# Subtest: Reconciliação independente do contexto 8 {"dCalendario|Ano":2021,"dCalendario|Data Vigente?":"Sim"}
+ok 11 - Reconciliação independente do contexto 8 {"dCalendario|Ano":2021,"dCalendario|Data Vigente?":"Sim"}
+  ---
+  duration_ms: 45.0344
+  ...
+# Subtest: Reconciliação independente do contexto 9 {"dCalendario|Ano":1999}
+ok 12 - Reconciliação independente do contexto 9 {"dCalendario|Ano":1999}
+  ---
+  duration_ms: 13.9949
+  ...
+# Subtest: Filtro sem resultados mantém ausência de média e taxa
+ok 13 - Filtro sem resultados mantém ausência de média e taxa
+  ---
+  duration_ms: 0.1805
+  ...
+# Subtest: Parâmetro desconectado não exclui fatos
+ok 14 - Parâmetro desconectado não exclui fatos
+  ---
+  duration_ms: 18.1057
+  ...
+# Subtest: Indicadores da captura publicada em 2021
+ok 15 - Indicadores da captura publicada em 2021
+  ---
+  duration_ms: 58.5074
+  ...
+1..15
+# tests 15
+# suites 0
+# pass 15
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 882.1878

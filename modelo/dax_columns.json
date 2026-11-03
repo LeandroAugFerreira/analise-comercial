@@ -1,0 +1,177 @@
+[
+  {
+    "TableName":"DateTableTemplate_0c184832-04ce-4ad8-b82e-4f16851dd803",
+    "ColumnName":"Ano",
+    "Expression":"YEAR([Date])"
+  },
+  {
+    "TableName":"DateTableTemplate_0c184832-04ce-4ad8-b82e-4f16851dd803",
+    "ColumnName":"MonthNo",
+    "Expression":"MONTH([Date])"
+  },
+  {
+    "TableName":"DateTableTemplate_0c184832-04ce-4ad8-b82e-4f16851dd803",
+    "ColumnName":"Mês",
+    "Expression":"FORMAT([Date], \"MMMM\")"
+  },
+  {
+    "TableName":"DateTableTemplate_0c184832-04ce-4ad8-b82e-4f16851dd803",
+    "ColumnName":"QuarterNo",
+    "Expression":"INT(([MonthNo] + 2) \/ 3)"
+  },
+  {
+    "TableName":"DateTableTemplate_0c184832-04ce-4ad8-b82e-4f16851dd803",
+    "ColumnName":"Trimestre",
+    "Expression":"\"Trim \" & [QuarterNo]"
+  },
+  {
+    "TableName":"DateTableTemplate_0c184832-04ce-4ad8-b82e-4f16851dd803",
+    "ColumnName":"Dia",
+    "Expression":"DAY([Date])"
+  },
+  {
+    "TableName":"LocalDateTable_6e30c11f-65e0-4c44-99d0-adad57233e71",
+    "ColumnName":"Ano",
+    "Expression":"YEAR([Date])"
+  },
+  {
+    "TableName":"LocalDateTable_6e30c11f-65e0-4c44-99d0-adad57233e71",
+    "ColumnName":"MonthNo",
+    "Expression":"MONTH([Date])"
+  },
+  {
+    "TableName":"LocalDateTable_6e30c11f-65e0-4c44-99d0-adad57233e71",
+    "ColumnName":"Mês",
+    "Expression":"FORMAT([Date], \"MMMM\")"
+  },
+  {
+    "TableName":"LocalDateTable_6e30c11f-65e0-4c44-99d0-adad57233e71",
+    "ColumnName":"QuarterNo",
+    "Expression":"INT(([MonthNo] + 2) \/ 3)"
+  },
+  {
+    "TableName":"LocalDateTable_6e30c11f-65e0-4c44-99d0-adad57233e71",
+    "ColumnName":"Trimestre",
+    "Expression":"\"Trim \" & [QuarterNo]"
+  },
+  {
+    "TableName":"LocalDateTable_6e30c11f-65e0-4c44-99d0-adad57233e71",
+    "ColumnName":"Dia",
+    "Expression":"DAY([Date])"
+  },
+  {
+    "TableName":"fVendas",
+    "ColumnName":"Tipo do Pedido",
+    "Expression":"IF(fVendas[Qtd Vendida]=1,\"Pedido Único\",\"Pedido Múltiplo\")"
+  },
+  {
+    "TableName":"dClientes",
+    "ColumnName":"Faixa Etaria",
+    "Expression":"SWITCH(TRUE(),\ndClientes[Idade]<=19, \"Jovem\",\ndClientes[Idade]<=59, \"Adulto\",\n\"Sênior\"\n)"
+  },
+  {
+    "TableName":"dClientes",
+    "ColumnName":"Numeração Faixa Etária",
+    "Expression":"SWITCH(TRUE(),\ndClientes[Idade]<=19, 1,\ndClientes[Idade]<=59, 2,\n3\n)"
+  },
+  {
+    "TableName":"dClientes",
+    "ColumnName":"Desconto",
+    "Expression":"SWITCH(dClientes[Nivel Escolar],\n\"Pós Graduação\", 0.2,\n\"Superior Completo\", 0.1,\n\"Superior Incompleto\", 0.05,\n0\n)"
+  },
+  {
+    "TableName":"LocalDateTable_8d496b3b-761a-4d12-af06-ca3724ac887a",
+    "ColumnName":"Ano",
+    "Expression":"YEAR([Date])"
+  },
+  {
+    "TableName":"LocalDateTable_8d496b3b-761a-4d12-af06-ca3724ac887a",
+    "ColumnName":"MonthNo",
+    "Expression":"MONTH([Date])"
+  },
+  {
+    "TableName":"LocalDateTable_8d496b3b-761a-4d12-af06-ca3724ac887a",
+    "ColumnName":"Mês",
+    "Expression":"FORMAT([Date], \"MMMM\")"
+  },
+  {
+    "TableName":"LocalDateTable_8d496b3b-761a-4d12-af06-ca3724ac887a",
+    "ColumnName":"QuarterNo",
+    "Expression":"INT(([MonthNo] + 2) \/ 3)"
+  },
+  {
+    "TableName":"LocalDateTable_8d496b3b-761a-4d12-af06-ca3724ac887a",
+    "ColumnName":"Trimestre",
+    "Expression":"\"Trim \" & [QuarterNo]"
+  },
+  {
+    "TableName":"LocalDateTable_8d496b3b-761a-4d12-af06-ca3724ac887a",
+    "ColumnName":"Dia",
+    "Expression":"DAY([Date])"
+  },
+  {
+    "TableName":"dCalendario",
+    "ColumnName":"Ano",
+    "Expression":"dCalendario[Datas].[Ano]"
+  },
+  {
+    "TableName":"dCalendario",
+    "ColumnName":"Num Mês",
+    "Expression":"dCalendario[Datas].[MonthNo]"
+  },
+  {
+    "TableName":"dCalendario",
+    "ColumnName":"Mês",
+    "Expression":"dCalendario[Datas].[Mês]"
+  },
+  {
+    "TableName":"dCalendario",
+    "ColumnName":"Inicio do Mês",
+    "Expression":"STARTOFMONTH(dCalendario[Datas])"
+  },
+  {
+    "TableName":"LocalDateTable_9f332867-e634-43b9-9450-99db4792c543",
+    "ColumnName":"Ano",
+    "Expression":"YEAR([Date])"
+  },
+  {
+    "TableName":"LocalDateTable_9f332867-e634-43b9-9450-99db4792c543",
+    "ColumnName":"MonthNo",
+    "Expression":"MONTH([Date])"
+  },
+  {
+    "TableName":"LocalDateTable_9f332867-e634-43b9-9450-99db4792c543",
+    "ColumnName":"Mês",
+    "Expression":"FORMAT([Date], \"MMMM\")"
+  },
+  {
+    "TableName":"LocalDateTable_9f332867-e634-43b9-9450-99db4792c543",
+    "ColumnName":"QuarterNo",
+    "Expression":"INT(([MonthNo] + 2) \/ 3)"
+  },
+  {
+    "TableName":"LocalDateTable_9f332867-e634-43b9-9450-99db4792c543",
+    "ColumnName":"Trimestre",
+    "Expression":"\"Trim \" & [QuarterNo]"
+  },
+  {
+    "TableName":"LocalDateTable_9f332867-e634-43b9-9450-99db4792c543",
+    "ColumnName":"Dia",
+    "Expression":"DAY([Date])"
+  },
+  {
+    "TableName":"dCalendario",
+    "ColumnName":"Trimestre",
+    "Expression":"dCalendario[Datas].[QuarterNo]"
+  },
+  {
+    "TableName":"dCalendario",
+    "ColumnName":"Nome Trimestre",
+    "Expression":"dCalendario[Datas].[Trimestre]"
+  },
+  {
+    "TableName":"dCalendario",
+    "ColumnName":"Data Vigente?",
+    "Expression":"IF(\n    dCalendario[Datas]<=MAX(fVendas[Data da Venda]),\n    \"Sim\",\n    \"Não\"\n)"
+  }
+]

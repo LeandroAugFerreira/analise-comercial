@@ -1,0 +1,62 @@
+[
+  {
+    "FromTableName":"fVendas",
+    "FromColumnName":"ID Cliente",
+    "ToTableName":"dClientes",
+    "ToColumnName":"ID Cliente",
+    "IsActive":1,
+    "Cardinality":"M:1",
+    "CrossFilteringBehavior":"Single",
+    "FromKeyCount":17419,
+    "ToKeyCount":null,
+    "RelyOnReferentialIntegrity":0
+  },
+  {
+    "FromTableName":"fVendas",
+    "FromColumnName":"ID Loja",
+    "ToTableName":"dLojas",
+    "ToColumnName":"ID Loja",
+    "IsActive":1,
+    "Cardinality":"M:1",
+    "CrossFilteringBehavior":"Single",
+    "FromKeyCount":296,
+    "ToKeyCount":null,
+    "RelyOnReferentialIntegrity":0
+  },
+  {
+    "FromTableName":"fDevoluções",
+    "FromColumnName":"SKU",
+    "ToTableName":"dProdutos",
+    "ToColumnName":"SKU",
+    "IsActive":1,
+    "Cardinality":"M:1",
+    "CrossFilteringBehavior":"Single",
+    "FromKeyCount":127,
+    "ToKeyCount":null,
+    "RelyOnReferentialIntegrity":0
+  },
+  {
+    "FromTableName":"fDevoluções",
+    "FromColumnName":"ID Loja",
+    "ToTableName":"dLojas",
+    "ToColumnName":"ID Loja",
+    "IsActive":1,
+    "Cardinality":"M:1",
+    "CrossFilteringBehavior":"Single",
+    "FromKeyCount":289,
+    "ToKeyCount":null,
+    "RelyOnReferentialIntegrity":0
+  },
+  {
+    "FromTableName":"fVendas",
+    "FromColumnName":"SKU",
+    "ToTableName":"dProdutos",
+    "ToColumnName":"SKU",
+    "IsActive":1,
+    "Cardinality":"M:1",
+    "CrossFilteringBehavior":"Single",
+    "FromKeyCount":133,
+    "ToKeyCount":null,
+    "RelyOnReferentialIntegrity":0
+  }
+]

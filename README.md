@@ -90,3 +90,13 @@ A publicação foi autorizada pelo autor. Não foi atribuída uma nova licença 
 ## 15. Portfólio
 
 [Página do projeto](https://leandroaugferreira.github.io/venda.html) · [Perfil GitHub](https://github.com/LeandroAugFerreira)
+
+## 16. Estudo de caso para recrutadores — vendas, margem e devoluções
+
+- [Auditoria técnica](docs/recrutamento/AUDITORIA.md), [estudo de caso](docs/recrutamento/ESTUDO_DE_CASO.md), [arquitetura Mermaid](docs/recrutamento/ARQUITETURA.md) e [15 perguntas técnicas](docs/recrutamento/ENTREVISTA_TECNICA.md).
+- [Guia interativo do case](https://leandroaugferreira.github.io/comercial-case.html) com períodos 2020/2021/2022, definições de métricas e canais/produtos. Não substitui o [dashboard web completo](https://leandroaugferreira.github.io/dashboards/comercial/).
+- [17 novos testes](tests/recrutamento.test.mjs): unidades x registros, faturamento, lucro pela fórmula DAX, devoluções, recomposição anual, lojas Online, Notebooks, valores vazios e relações.
+- [32 testes Node aprovados](https://github.com/LeandroAugFerreira/analise-comercial/actions/runs/42540265849), incluindo 15 anteriores; auditoria agregada de qualidade de cinco relações [documentada](docs/recrutamento/QUALIDADE_DADOS.md).
+- [Evidências executadas](docs/recrutamento/EVIDENCIAS.md), [roteiro de 3 minutos](docs/recrutamento/ROTEIRO_DEMO.md), [plano de melhorias](docs/recrutamento/PLANO_DE_MELHORIAS.md), [protocolo](docs/recrutamento/PROTOCOLO_DE_TESTES.md).
+
+**Limites importantes:** o conjunto é fictício/didático, o site usa cálculos JavaScript e não motor DAX. `Total Vendas` são **84.174 unidades**, não pedidos. `Lucro Total` aplica `0,9 × preço - custo`; não é lucro líquido. `Faturamento Perdido` é valor nominal de produtos devolvidos, **não** estorno bancário. Os testes não atualizaram PBIX, XLSX, M, DAX, dados ou dashboard original.
